@@ -41,10 +41,8 @@ streamlit.dataframe(my_data_rows)
 
 #challenge
 add_my_fruit = streamlit.text_input("What fruit would you like to add?", '')
-my_cur.execute("insert into fruit_load_list", add_my_fruit)
-my_cur.commit()
 streamlit.write('Thanks for adding', add_my_fruit)
-
+my_cur.execute("insert into fruit_load_list ", add_my_fruit)
 
 
 
